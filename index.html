@@ -3,123 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Gadget Picks – my favorite cheap gadgets</title>
-<meta name="description" content="The cheap gadgets from my videos – every pick in one place.">
-<!--
-  HUB-SEITE (Affiliate-Schaufenster). Ein stabiler Link fuer Bio + Pin-Kommentar
-  auf allen Plattformen. Produkte unten im <main> anpassen:
-  Titel, ein Nutzen-Satz, Preis, href = Amazon-Link.
-  WICHTIG: in jedem Amazon-Link muss  ?tag=rafael0490-20  drin sein (US-Provision).
-  Suchlinks sind nur der Start - fuer beste Conversion durch feste Produkt-Links (/dp/ASIN) ersetzen.
--->
+<title>Top Gadget Picks - my favorite cheap gadgets</title>
+<meta name="description" content="The gadgets from my videos - every pick in one place, best first.">
 <style>
-  :root{
-    --bg1:#0f172a; --bg2:#1e293b; --card:#ffffff; --ink:#0f172a;
-    --muted:#64748b; --accent:#f97316; --accent2:#ea580c; --ok:#16a34a;
-  }
+  :root{--bg1:#0f172a;--bg2:#1e293b;--card:#fff;--ink:#0f172a;--muted:#64748b;--accent:#f97316;--accent2:#ea580c}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    color:var(--ink);
-    background:linear-gradient(160deg,var(--bg1),var(--bg2));
-    min-height:100vh; padding:32px 18px 56px; display:flex; justify-content:center;
-  }
-  .wrap{width:100%; max-width:640px}
-  header{text-align:center; margin-bottom:28px; color:#fff}
-  .logo{
-    display:inline-flex; align-items:center; justify-content:center;
-    width:64px; height:64px; border-radius:16px; margin-bottom:14px;
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    font-size:32px; box-shadow:0 8px 24px rgba(249,115,22,.35);
-  }
-  h1{font-size:26px; font-weight:800; letter-spacing:-.02em}
-  .sub{color:#94a3b8; font-size:15px; margin-top:6px}
-  .grid{display:grid; grid-template-columns:1fr; gap:16px}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);
+    background:linear-gradient(160deg,var(--bg1),var(--bg2));min-height:100vh;padding:32px 18px 56px;display:flex;justify-content:center}
+  .wrap{width:100%;max-width:640px}
+  header{text-align:center;margin-bottom:28px;color:#fff}
+  .logo{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:16px;
+    margin-bottom:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));font-size:32px}
+  h1{font-size:26px;font-weight:800}
+  .sub{color:#94a3b8;font-size:15px;margin-top:6px}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
   @media(min-width:520px){.grid{grid-template-columns:1fr 1fr}}
-  .card{
-    background:var(--card); border-radius:16px; padding:20px;
-    display:flex; flex-direction:column; box-shadow:0 6px 22px rgba(0,0,0,.18);
-  }
-  .rank{font-size:12px; font-weight:800; color:var(--accent2); letter-spacing:.06em; margin-bottom:8px}
-  .card h2{font-size:18px; line-height:1.25; margin-bottom:8px}
-  .card p{color:var(--muted); font-size:14px; line-height:1.5; margin-bottom:16px; flex:1}
-  .price{font-weight:800; margin-bottom:12px}
-  .cta{
-    display:block; text-align:center; text-decoration:none; color:#fff;
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    font-weight:800; font-size:15px; padding:13px 16px; border-radius:12px;
-    box-shadow:0 6px 16px rgba(249,115,22,.3); transition:transform .08s ease;
-  }
-  .cta:active{transform:scale(.98)}
-  footer{margin-top:28px; text-align:center; color:#94a3b8; font-size:12px; line-height:1.6}
-  .disc{background:rgba(255,255,255,.06); border-radius:12px; padding:12px 16px}
+  .card{background:var(--card);border-radius:16px;padding:20px;display:flex;flex-direction:column;position:relative}
+  .card.hot{outline:3px solid var(--accent)}
+  .pop{position:absolute;top:-11px;left:20px;background:var(--accent);color:#fff;font-size:12px;font-weight:800;
+    padding:3px 12px;border-radius:999px}
+  .rank{font-size:12px;font-weight:800;color:var(--accent2);letter-spacing:.06em;margin-bottom:8px}
+  .card h2{font-size:18px;line-height:1.25;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:14px;line-height:1.5;margin-bottom:14px;flex:1}
+  .row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .price{font-weight:800}
+  .views{font-size:12px;color:var(--muted)}
+  .cta{display:block;text-align:center;text-decoration:none;color:#fff;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));font-weight:800;font-size:15px;
+    padding:13px 16px;border-radius:12px}
+  footer{margin-top:28px;text-align:center;color:#94a3b8;font-size:12px;line-height:1.6}
+  .disc{background:rgba(255,255,255,.06);border-radius:12px;padding:12px 16px}
 </style>
 </head>
 <body>
   <div class="wrap">
-
     <header>
       <div class="logo">&#128268;</div>
       <h1>Top Gadget Picks</h1>
-      <div class="sub">The cheap gadgets from my videos &ndash; all in one place.</div>
+      <div class="sub">The gadgets from my videos &ndash; best picks first.</div>
     </header>
-
     <main class="grid">
-
-      <article class="card">
+      <article class="card hot">
+        
         <div class="rank">PICK #1</div>
         <h2>Magnetic charging cable</h2>
-        <p>Snaps onto your phone in the dark &ndash; no more fumbling for the port.</p>
-        <div class="price">around $10</div>
-        <a class="cta" href="https://www.amazon.com/s?k=magnetic+charging+cable&tag=rafael0490-20"
-           target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
+        <p>Snaps onto your phone in the dark - no fumbling for the port.</p>
+        <div class="row"><span class="price">~$10</span></div>
+        <a class="cta" href="https://www.amazon.com/s?k=magnetic+charging+cable&amp;tag=rafael0490-20" target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
       </article>
-
       <article class="card">
+        
         <div class="rank">PICK #2</div>
         <h2>Portable mini blender</h2>
-        <p>Fits in your bag and blends a smoothie in about 30 seconds.</p>
-        <div class="price">around $25</div>
-        <a class="cta" href="https://www.amazon.com/s?k=portable+mini+blender&tag=rafael0490-20"
-           target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
+        <p>Fits in your bag and blends a smoothie in 30 seconds.</p>
+        <div class="row"><span class="price">~$25</span></div>
+        <a class="cta" href="https://www.amazon.com/s?k=portable+mini+blender&amp;tag=rafael0490-20" target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
       </article>
-
       <article class="card">
+        
         <div class="rank">PICK #3</div>
         <h2>Smart LED light strip</h2>
-        <p>Stick-on strips that turn any room into a vibe &ndash; controlled from your phone.</p>
-        <div class="price">around $15</div>
-        <a class="cta" href="https://www.amazon.com/s?k=smart+led+light+strip&tag=rafael0490-20"
-           target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
+        <p>Turns any room into a vibe - controlled from your phone.</p>
+        <div class="row"><span class="price">~$15</span></div>
+        <a class="cta" href="https://www.amazon.com/s?k=smart+led+light+strip&amp;tag=rafael0490-20" target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
       </article>
-
       <article class="card">
+        
         <div class="rank">PICK #4</div>
         <h2>Self-stirring mug</h2>
-        <p>Stirs your coffee by itself at the press of a button. Yes, really.</p>
-        <div class="price">around $18</div>
-        <a class="cta" href="https://www.amazon.com/s?k=self+stirring+mug&tag=rafael0490-20"
-           target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
+        <p>Stirs your coffee by itself at the press of a button.</p>
+        <div class="row"><span class="price">~$18</span></div>
+        <a class="cta" href="https://www.amazon.com/s?k=self+stirring+mug&amp;tag=rafael0490-20" target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
       </article>
-
       <article class="card">
+        
         <div class="rank">PICK #5</div>
         <h2>Lipstick-size power bank</h2>
-        <p>Pocket charger that refills your phone twice &ndash; smaller than a marker.</p>
-        <div class="price">around $20</div>
-        <a class="cta" href="https://www.amazon.com/s?k=mini+power+bank+portable+charger&tag=rafael0490-20"
-           target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
+        <p>Pocket charger that fills your phone twice over.</p>
+        <div class="row"><span class="price">~$20</span></div>
+        <a class="cta" href="https://www.amazon.com/s?k=mini+power+bank+portable+charger&amp;tag=rafael0490-20" target="_blank" rel="sponsored noopener">View on Amazon &rarr;</a>
       </article>
-
     </main>
-
     <footer>
-      <div class="disc">
-        As an Amazon Associate I earn from qualifying purchases.
-        Prices and availability are accurate as of the time shown on Amazon.
-      </div>
+      <div class="disc">As an Amazon Associate I earn from qualifying purchases.
+      Prices and availability are accurate as of the time shown on Amazon.</div>
     </footer>
-
   </div>
 </body>
 </html>
